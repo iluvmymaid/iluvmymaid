@@ -2,6 +2,19 @@ html {
 	min-height: 100%;
 }
 
+#black-screen {
+	background: rgb(37,37,37);
+	width: 5000px;
+	height: 5000px;
+	opacity: 0;
+	-webkit-transition: 2s ease;
+	-o-transition: 2s ease;
+	-moz-transition: 2s ease;
+	transition: 2s ease;
+	position: fixed;
+	top: 0;
+}
+
 body {
 	background: #b89dd1; /* Old Browsers */
 	background: -webkit-linear-gradient(bottom right,#b89dd1,#f7f7f7); /*Safari 5.1-6*/
@@ -22,6 +35,10 @@ body {
 	border-radius: 2px;
 	z-index: 2;
 	overflow: hidden;
+	-webkit-transition: 2s ease;
+	-o-transition: 2s ease;
+	-moz-transition: 2s ease;
+	transition: 2s ease;
 }
 
 .cloud-container {
@@ -49,6 +66,10 @@ body {
     border-right: 1px solid rgb(240,240,240);
     border-top: 1px solid rgb(240,240,240);
     z-index: 5;
+    -webkit-transition: 2s ease;
+	-o-transition: 2s ease;
+	-moz-transition: 2s ease;
+	transition: 2s ease;
 }
 
 .btn {
@@ -93,11 +114,11 @@ p .ln-th {
 	right: -160px;
 }
 
-#container6 {
+#container7 {
 	position: relative;
 }
 
-#container6 button {
+#container7 button {
 	display: block;
 	position: absolute;
 	bottom: -55px;

@@ -42,7 +42,56 @@
 				.type('Вот. ')
 				.type('<i class="fa fa-heart-o" style="color: rgb(226,41,41);" aria-hidden="true"></i>');
 			}
+			else if (currentPage === 5)
+			{
+				$('#black-screen').css('opacity', 1);
+				$('.cloud__triangle').css('background', 'rgb(43,43,43)');
+				$('.cloud').css('background', 'rgb(43,43,43)');
+				$('#type-here-song').css('color', 'rgb(236,240,241)');
+				
+				new TypeIt('#type-here-song', {
+				     speed: 50,
+				     autoStart: false
+				})
+				.type('Иногда кажется, что неудачами полнятся все твои новые дни,')
+				.pause(250)
+				.break()
+				.type('А счастье словно где-то скрывается,')
+				.pause(250)
+				.break()
+				.type('Там, где ты его не можешь найти!')
+				.pause(250)
+				.break()
+				.type('Предоставь это мне, вся неудача твоя')
+				.pause(250)
+				.break()
+				.type('Растает, как кубик льда – вот так чудо!')
+				.pause(250)
+				.break()
+				.type('Начинается все (каждым ясным утром)')
+				.pause(250)
+				.break()
+				.type('И подходит к концу, (жизнь такая штука)')
+				.pause(250)
+				.break()
+				.type('Шар земной совершает оборот, принося новый день.')
+				.pause(250)
+				.break()
+				.type('Есть в твоей жизни цель! (Приложи усилья)')
+				.pause(250)
+				.break()
+				.type('Есть ли к ней краткий путь? (Знать хочу я)')
+				.pause(250)
+				.break()
+				.type('В темноте продолжая танец свой, я кружусь для тебя.');
+			}
+			else {
+				$('#black-screen').css('opacity', 0);
+				$('.cloud__triangle').css('background', 'rgb(255,255,255)');
+				$('.cloud').css('background', 'rgb(255,255,255)');
+			}
 		}
+
 		function nextPage() {
 			var pP = currentPage - 1;
 			var cP = currentPage;
@@ -63,7 +112,7 @@
 			currentPage++;
 			myType();
 			$('#btn1').removeAttr('disabled');
-			if (currentPage == 6) {
+			if (currentPage == 7) {
 				$('#btn2').attr('disabled', 'true');
 			}
 		}
@@ -92,6 +141,7 @@
 		
 	</script>
 <body>
+	<div id="black-screen"></div>
 	<div class="cloud-container">
 		<!-- <img class="avatar" src="img/yuuta.jpg" alt="Я"> -->
 		<div class="cloud__triangle"></div>
@@ -102,7 +152,7 @@
 				тебе в подарочек. Очень надеюсь, что она тебе 
 		    	понравится. Понятия не имею, как она будет выглядеть
 				на телефоне, так как вспомнил о том, что у тебя 
-				сломан ноутбук, когда было слишком поздно. Мур. 
+				сломан ноутбук, когда было слишком поздно. Мур.  
 				<i class="fa fa-star-o" aria-hidden="true"></i></p>
 			</div>
 
@@ -126,17 +176,20 @@
 				<p class="h1-i-think">Вы можете пропустить эту страничку.</p>
 				<p id="type-here-pls"></p>
 			</div>
-
 			<div id="container5" hidden="true" class="animated">
+				
+				<p id="type-here-song"></p>
+			</div>
+			<div id="container6" hidden="true" class="animated">
 				<p class="h1-i-think">Let's keep the skies clear together!</p>
 				<p>Покупай уже там зарядочку поскорее, я соскучился по тебе и нашим играм.<br>
 					I require healing! <i class="fa fa-plus-square" style="color: rgb(226,41,41);" aria-hidden="true"></i></p>
 			</div>
-			<div id="container6" hidden="true" class="animated">
+			<div id="container7" hidden="true" class="animated">
 				<p class="h1-i-think">Внимание!</p>
 				<p>Спасибо за внимание! Если тебе понравилось, то буду рад видеть твои впечатления в нашей личке.
 				   Я правда очень старался, изучил некоторые технологии, с которыми никогда не работал, но, вроде,
-					вышло неплохо! Надеюсь, тебе понравилось! А теперь напиши мне, пожалуйста. :з
+					вышло неплохо! Надеюсь, тебе понравилось! А теперь напиши мне, милая. :з
 				<button type="button" onclick="location.href='https://vk.me/tlenkie';" class="btn btn-primary">Илюша <i class="fa fa-vk" aria-hidden="true"></i></button>
 			</div>
 		
