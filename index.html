@@ -3,18 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>тьмок!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="img/icon.png" />
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Neucha&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700&amp;subset=cyrillic" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&amp;subset=cyrillic" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
 	<link rel="stylesheet" href="css/main.css">
 </head>
 	<script src="js/jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typeit@5.5.2/dist/typeit.min.js"></script>
 	<script type="text/javascript">
 		var currentPage = 1;
+		function myType() {
+			if (currentPage === 4)
+			{ 
+				new TypeIt('#type-here-pls', {
+				     speed: 50,
+				     autoStart: false
+				})
+				.pause(500)
+				.type('F vj tnt yt ghjgecrfnm b')
+				.pause(500)
+				.delete()
+				.delete()
+				.type('А можете не пропускать и прочесть, что я вас ')
+				.pause(1200)
+				.type('очень ')
+				.pause(750)
+				.type('люблю и ценю.')
+				.pause(750)
+				.break()
+				.type('Вот. ')
+				.type('<i class="fa fa-heart-o" style="color: rgb(226,41,41);" aria-hidden="true"></i>');
+			}
+		}
 		function nextPage() {
 			var pP = currentPage - 1;
 			var cP = currentPage;
@@ -33,6 +61,7 @@
 
 			
 			currentPage++;
+			myType();
 			$('#btn1').removeAttr('disabled');
 			if (currentPage == 6) {
 				$('#btn2').attr('disabled', 'true');
@@ -54,6 +83,7 @@
 			}, 1000);
 
 			currentPage--;
+			myType();
 			$('#btn2').removeAttr('disabled');
 			if (currentPage == 1) {
 				$('#btn1').attr('disabled', 'true');
@@ -63,7 +93,7 @@
 	</script>
 <body>
 	<div class="cloud-container">
-		<img class="avatar" src="img/yuuta.jpg" alt="Я">
+		<!-- <img class="avatar" src="img/yuuta.jpg" alt="Я"> -->
 		<div class="cloud__triangle"></div>
 		<div class="cloud">
 			<div id="container1" class="animated">
@@ -94,8 +124,7 @@
 		
 			<div id="container4" hidden="true" class="animated">
 				<p class="h1-i-think">Вы можете пропустить эту страничку.</p>
-				<p>А можете не пропускать и прочесть, что я вас очень люблю и ценю. 
-					<i class="fa fa-heart-o" style="color: rgb(226,41,41);" aria-hidden="true"></i></p>
+				<p id="type-here-pls"></p>
 			</div>
 
 			<div id="container5" hidden="true" class="animated">

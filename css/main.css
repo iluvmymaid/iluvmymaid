@@ -1,9 +1,18 @@
+html {
+	min-height: 100%;
+}
+
 body {
-	background: rgb(247,247,247);
+	background: #b89dd1; /* Old Browsers */
+	background: -webkit-linear-gradient(bottom right,#b89dd1,#f7f7f7); /*Safari 5.1-6*/
+	background: -o-linear-gradient(bottom right,#b89dd1,#f7f7f7); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(bottom right,#b89dd1,#f7f7f7); /*Fx 3.6-15*/
+	background: linear-gradient(bottom right, #b89dd1, #f7f7f7); /*Standard*/
+	background-attachment: fixed;
 }
 
 .cloud {
-	width: 500px;
+	width: 100%;
 	min-height: 250px;
 	background: rgb(255,255,255);
 	padding: 25px;
@@ -16,10 +25,12 @@ body {
 }
 
 .cloud-container {
-	width: 500px;
+	width: 80%;
+	max-width: 500px;
 	min-height: 250px;
 	margin: 0 auto;
 	margin-top: 10%;
+	margin-bottom: 20px;
 	padding: 0;
 	position: relative;
 }
@@ -28,13 +39,13 @@ body {
 	width: 25px;
 	height: 25px;
 	background: rgb(255,255,255);
-	transform: rotate(45deg);
-	-moz-transform: rotate(45deg);  /* Firefox */
-    -o-transform: rotate(45deg);  /* Opera */
-    -webkit-transform: rotate(45deg);  /* Safari y Chrome */
+	transform: rotate(135deg);
+	-moz-transform: rotate(135deg);  /* Firefox */
+    -o-transform: rotate(135deg);  /* Opera */
+    -webkit-transform: rotate(135deg);  /* Safari y Chrome */
     position: absolute;
-    bottom: 5px;
-    right: -13px;
+    bottom: -13px;
+    right: 20px;
     border-right: 1px solid rgb(240,240,240);
     border-top: 1px solid rgb(240,240,240);
     z-index: 5;
@@ -57,13 +68,12 @@ body {
 
 p {
 	font-size: 16px;
-	font-family: 'Alegreya Sans SC', sans-serif;
+	font-family: 'Alegreya Sans SC', cursive;
 }
 
 .h1-i-think {
-	font-weight: bold;
-	color: rgb(73,146,195);
-	font-size: 16px;
+	color: rgb(171,138,199);
+	font-size: 20px;
 	font-family: 'Comfortaa', cursive;
 }
 
@@ -74,8 +84,10 @@ p .ln-th {
 .avatar {
 	border-radius: 50%;
 	border: 1px solid rgb(240,240,240);
-	width: 130px;
-	height: 130px;
+	width: 10%;
+	height: 10%;
+	max-width: 130px;
+	max-height: 130px;
 	position: absolute;
 	bottom: -45px;
 	right: -160px;
