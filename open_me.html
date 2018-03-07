@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>meow!</title>
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+	<script
+			  src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+			  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+			  crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var currentPage = 1;
+		function nextPage() {
+			var pP = currentPage - 1;
+			var cP = currentPage;
+			var nP = currentPage + 1;
+			$('#container' + cP).toggleClass('bounceOutLeft');
+			window.setTimeout(function() {
+				$('#container' + cP).toggleClass('bounceOutLeft');
+				$('#container' + cP).attr('hidden', true);
+				$('#container' + nP).attr('hidden', false);
+				$('#container' + nP).toggleClass('bounceInRight');
+				window.setTimeout(function() {
+					$('#container' + nP).toggleClass('bounceInRight');
+				}, 1000);
+				
+			}, 1000);
+
+			
+			currentPage++;
+			$('#btn1').removeAttr('disabled');
+			if (currentPage == 6) {
+				$('#btn2').attr('disabled', 'true');
+			}
+		}
+
+		function prevPage() {
+			var pP = currentPage - 1;
+			var cP = currentPage;
+			$('#container' + cP).toggleClass('bounceOutRight');
+			window.setTimeout(function() {
+				$('#container' + cP).toggleClass('bounceOutRight');
+				$('#container' + cP).attr('hidden', true);
+				$('#container' + pP).attr('hidden', false);
+				$('#container' + pP).toggleClass('bounceInLeft');
+				window.setTimeout(function() {
+					$('#container' + pP).toggleClass('bounceInLeft');
+				}, 1000);
+			}, 1000);
+
+			currentPage--;
+			$('#btn2').removeAttr('disabled');
+			if (currentPage == 1) {
+				$('#btn1').attr('disabled', 'true');
+			}
+		}
+		
+	</script>
+<body>
+	<div class="cloud-container">
+		<img class="avatar" src="img/yuuta.jpg" alt="Я">
+		<div class="cloud__triangle"></div>
+		<div class="cloud">
+			<div id="container1" class="animated">
+				<p class="h1-i-think">Ну ничего себе.</p>
+				<p>Я потратил некоторое время и сделал эту ерунду
+				тебе в подарочек. Очень надеюсь, что она тебе 
+		    	понравится. Понятия не имею, как она будет выглядеть
+				на телефоне, так как вспомнил о том, что у тебя 
+				сломан ноутбук, когда было слишком поздно. Мур. 
+				<i class="fa fa-star-o" aria-hidden="true"></i></p>
+			</div>
+
+			<div id="container2" hidden="true" class="animated">
+				<p class="h1-i-think">Уже весна, рили что ли.</p>
+				<p><span class="ln-th">С сорока-с-чем-то летием, бать.</span>
+					Не скажу, что я отношусь с каким-то особенным благоговением к 8 Марта,
+					я бы даже сказал, что считаю чем-то странным тот факт, что можно поздравлять 
+					человека за то, что он родился женщиной (или мужчиной), но ты мне нравки, 
+					мне хочется сделать тебе приятность, и потому ты, собственно, здесь.</p>
+			</div>
+
+			<div id="container3" hidden="true" class="animated">
+			<p class="h1-i-think">Ля, шо пожелать.</p>
+			<p>Конечно же, в первую очередь здоровьица, душевного равновесия, хороших людей
+				вокруг, оставаться всё такой же душечкой-милашечкой-красивушечкой и получать побольше удовольствия от жизни. 
+				Пожалуйста, стань уже счастливой, я не устану повторять этого. И, бог с тобой, крайне неохотно, но я пожелаю тебе всего хорошего в отношениях с этим твоим чуваком. Или не пожелаю, не знаю, не хочу тебе врать.</p>
+			</div>
+		
+			<div id="container4" hidden="true" class="animated">
+				<p class="h1-i-think">Вы можете пропустить эту страничку.</p>
+				<p>А можете не пропускать и прочесть, что я вас очень люблю и ценю. 
+					<i class="fa fa-heart-o" style="color: rgb(226,41,41);" aria-hidden="true"></i></p>
+			</div>
+
+			<div id="container5" hidden="true" class="animated">
+				<p class="h1-i-think">Let's keep the skies clear together!</p>
+				<p>Покупай уже там зарядочку поскорее, я соскучился по тебе и нашим играм.<br>
+					I require healing! <i class="fa fa-plus-square" style="color: rgb(226,41,41);" aria-hidden="true"></i></p>
+			</div>
+			<div id="container6" hidden="true" class="animated">
+				<p class="h1-i-think">Внимание!</p>
+				<p>Спасибо за внимание! Если тебе понравилось, то буду рад видеть твои впечатления в нашей личке.
+				   Я правда очень старался, изучил некоторые технологии, с которыми никогда не работал, но, вроде,
+					вышло неплохо! Надеюсь, тебе понравилось! А теперь напиши мне, пожалуйста. :з
+				<button type="button" onclick="location.href='https://vk.me/tlenkie';" class="btn btn-primary">Илюша <i class="fa fa-vk" aria-hidden="true"></i></button>
+			</div>
+		
+			<button id="btn1" type="button" onclick="prevPage();" class="btn btn-outline-primary prev" disabled><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+			<button id="btn2" type="button" onclick="nextPage();" class="btn btn-outline-primary next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+		</div>
+	</div>
+	
+</body>
+</html>
