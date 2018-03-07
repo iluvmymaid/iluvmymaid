@@ -42,7 +42,7 @@
 				.type('Вот. ')
 				.type('<i class="fa fa-heart-o" style="color: rgb(226,41,41);" aria-hidden="true"></i>');
 			}
-			else if (currentPage === 5)
+			if (currentPage === 5)
 			{
 				$('#black-screen').css('opacity', 1);
 				$('.cloud__triangle').css('background', 'rgb(43,43,43)');
@@ -62,10 +62,14 @@
 				.type('Там, где ты его не можешь найти!')
 				.pause(250)
 				.break()
-				.type('Предоставь это мне, вся неудача твоя')
+				.type('Предоставь это мне, ')
+				.pause(250)
+				.type('вся неудача твоя')
 				.pause(250)
 				.break()
-				.type('Растает, как кубик льда – вот так чудо!')
+				.type('Растает, как кубик льда')
+				.pause(250)
+				.type(' – вот так чудо!')
 				.pause(250)
 				.break()
 				.type('Начинается все (каждым ясным утром)')
